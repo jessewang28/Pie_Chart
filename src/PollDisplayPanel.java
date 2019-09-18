@@ -12,8 +12,10 @@ public class PollDisplayPanel extends JPanel
 {
     private String name1, name2, name3;
     // Declare the int fields count1, count2, count3:
+    int count1;
+    int count2;
+    int count3;
 
-    ________________________________________________________
 
     // Constructor
     public PollDisplayPanel(String nm1, String nm2, String nm3)
@@ -30,32 +32,28 @@ public class PollDisplayPanel extends JPanel
     // Increments count1
     public void vote1()
     {
-
-        ______________________________________
+        count1 = count1+1;
     }
 
     // Increments count2
     public void vote2()
     {
+        count2 = count2+1;
 
-        ______________________________________
     }
 
     // Increments count3
     public void vote3()
     {
+        count3 = count3+1;
 
-        ______________________________________
     }
 
     // Returns a string representation of this object
     public String toString()
     {
-        return   _______________________________ +
+        return (name1 + count1, name2 + count2, name3 + count3);
 
-                ____________________________________ +
-
-                ________________________________ ;
     }
 
     // Redefines JPanel's paintComponent to draw this pie chart
@@ -147,5 +145,13 @@ public class PollDisplayPanel extends JPanel
             g.fillOval(x - r, y - r, 2 * r, 2 * r);
         else
             g.fillArc(x - r, y - r, 2 * r, 2 * r, fromDegree, degrees);
+    }
+    public static void main(String[] args) {
+        PollDisplayPanel votingMachine =
+                new PollDisplayPanel("Ankit", "James", "Evan");
+        votingMachine.vote1();
+        votingMachine.vote2();
+        votingMachine.vote3();
+        System.out.println(votingMachine);
     }
 }
