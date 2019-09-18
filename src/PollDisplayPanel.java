@@ -52,7 +52,7 @@ public class PollDisplayPanel extends JPanel
     // Returns a string representation of this object
     public String toString()
     {
-        return (name1 + count1, name2 + count2, name3 + count3);
+        return (name1 + ": " + count1 + " " + name2 + ": " + count2 + " " + name3 + ": " + count3);
 
     }
 
@@ -92,9 +92,16 @@ public class PollDisplayPanel extends JPanel
             degrees = countToDegrees(count1, total);
             drawSector(g, x, y, r, fromDegree, degrees);
 
-            _________________________________________________
+            g.setColor(Color.BLUE);
+            degrees = countToDegrees(count2, total);
+            drawSector(g, x, y, r, fromDegree, degrees);
 
-      ...
+            g.setColor(Color.GREEN);
+            degrees = countToDegrees(count3, total);
+            drawSector(g, x, y, r, fromDegree, degrees);
+
+
+     // ...
         }
         else
         {
@@ -110,11 +117,11 @@ public class PollDisplayPanel extends JPanel
         y += (r + 20);
         g.setColor(Color.BLACK);
 
-        g.drawString( _______________ , x - r, y);
+       // g.drawString( _______________ , x - r, y);
 
-        g.drawString( _______________ , x, y);
+       //g.drawString( _______________ , x, y);
 
-        g.drawString( _______________ , x + r, y);
+        //g.drawString( _______________ , x + r, y);
 
 
         // Display the color squares:
@@ -132,8 +139,7 @@ public class PollDisplayPanel extends JPanel
     // corresponds to count / total, rounded to the nearest integer.
     private int countToDegrees(int count, int total)
     {
-
-        return _________________________________________________ ;
+        return 0 ;
     }
 
 
@@ -151,7 +157,7 @@ public class PollDisplayPanel extends JPanel
                 new PollDisplayPanel("Ankit", "James", "Evan");
         votingMachine.vote1();
         votingMachine.vote2();
-        votingMachine.vote3();
+        votingMachine.vote2();
         System.out.println(votingMachine);
     }
 }
