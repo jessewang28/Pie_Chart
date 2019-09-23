@@ -95,10 +95,10 @@ public class PollDisplayPanel extends JPanel
 
             fromDegree+=degrees;
             g.setColor(Color.GREEN);
-            degrees = countToDegrees(count2 + degrees, total);
+            degrees = countToDegrees(count2, total);
             drawSector(g, x, y, r, fromDegree, degrees);
 
-
+            fromDegree+=degrees;
             g.setColor(Color.BLUE);
             degrees = Math.max(360 - fromDegree, 0);
             drawSector(g, x, y, r, fromDegree, degrees);
@@ -159,7 +159,7 @@ public class PollDisplayPanel extends JPanel
     }
     public static void main(String[] args) {
         PollDisplayPanel votingMachine =
-                new PollDisplayPanel("Ankit", "James", "Evan");
+                new PollDisplayPanel("Tammy", "Brian", "Liz");
         votingMachine.vote1();
         votingMachine.vote2();
         votingMachine.vote2();
