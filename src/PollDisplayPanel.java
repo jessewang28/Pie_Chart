@@ -1,3 +1,7 @@
+//Pie Chart Lab
+//Jesse Wang
+//3B Computer Science
+
 /**
  * A PollDisplayPanel holds the vote counts and
  * displays the numbers and the pie chart for
